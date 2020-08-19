@@ -5,14 +5,21 @@ class ListNode:
         self.next = next
 class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
-        if l1.val > l2.val:
-            return mergeTwoLists(l2, l1)
-        current_val = l1.val
-        new_list = ListNode(current_val)
-        
-        node_next = l1.next
-        if node_next.val > l2.val:
-            return mergeTwoLists(l2, l1)
+
+        #ceate a new ll
+        l3 = ListNode()
+
+        stack = []
+        stack.insert(0, l1.va)
+
+        while stack:
+            if stack[0] <= l2.val:
+                l3.val = stack.pop(0)
+                
+            else:
+
+
+            pass
 
 def main():
     l11 = ListNode(1)
